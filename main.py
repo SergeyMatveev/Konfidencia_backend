@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 
-app = FastAPI()
 
+app = FastAPI(
+    title="Konfidencia_app"
+)
 
-@app.get("/{item}")
-def hello(item=int):
-    t = item
-    return "Hello world!" + t
+@app.get("/")
+def get_mainpage():
+    return {"message": "Hello, World!"}
