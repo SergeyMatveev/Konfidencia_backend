@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 
 app = FastAPI(
-    title="Konfidencia_app"
+    title="Konfidencia_backend"
 )
 
 @app.get("/")
