@@ -15,9 +15,13 @@ roles = Table(
 users = Table(
     "users",
     metadata,
-    Column("id", Integer, primary_key=True),
-    Column("name", String, nullable=False),
-    Column("role_id", Integer, ForeignKey("roles.id")),
-    Column("password", String, nullable=False),
-    Column("registered", TIMESTAMP, default=datetime.utcnow)
+    Column("user_id", Integer, primary_key=True),
+    Column("user_first_name", String, nullable=False),
+    Column("user_second_name", String, nullable=False),
+    Column("user_fathers_name", String, nullable=False),
+    Column("user_role_id", Integer, ForeignKey("roles.id")),
+    Column("user_password", String, nullable=False),
+    Column("user_email", String, nullable=False),
+    Column("user_birthday", String, nullable=False),
+    Column("user_registered", TIMESTAMP, default=datetime.utcnow)
 )
